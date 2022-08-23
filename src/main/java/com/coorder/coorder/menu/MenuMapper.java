@@ -19,7 +19,7 @@ public interface MenuMapper {
     )
     public List<HashMap<String, Object>> getMenu(String storCd);
 
-    @Select("select MENU_CD, S_MENU_CD, S_MENU_NM, PRICE, S_MENU_TYPE, IS_COUNT\n" +
+    @Select("select MENU_CD, S_MENU_CD, S_MENU_NM, PRICE, S_MENU_TYPE, IS_COUNT, MAX_CNT\n" +
             "from T_MENU_S\n" +
             "where 1=1\n" +
             "and STOR_CD = #{storCd}\n" +
