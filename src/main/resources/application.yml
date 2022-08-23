@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@coorder-db.cnruvnbfwdg7.us-west-1.rds.amazonaws.com:1521:ORCL
+    username: admin
+    password: 'Coorder2022!'
+
+server:
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
