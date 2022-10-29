@@ -38,12 +38,10 @@ public class SmsService {
         SmsSubmissionResponse response = client.getSmsClient().submitMessage(message);
 
         if (response.getMessages().get(0).getStatus() == MessageStatus.OK) {
-            System.out.println(randomInt);
             map.put("result", "true");
             smsMapper.insertNum(randomInt, userNum);
             return map;
         } else {
-            System.out.println(randomInt);
             map.put("result", response.getMessages().get(0).getErrorText());
             return map;
         }
